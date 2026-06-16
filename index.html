@@ -11,6 +11,13 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ===== ANIMATED BACKGROUND ===== -->
+  <div class="blobs" aria-hidden="true">
+    <span class="blob blob--1"></span>
+    <span class="blob blob--2"></span>
+    <span class="blob blob--3"></span>
+  </div>
+
   <!-- ===== NAV ===== -->
   <header class="nav">
     <a href="#" class="nav__logo">OE</a>
@@ -28,7 +35,7 @@
   <section class="hero">
     <p class="hero__eyebrow">Hi, my name is</p>
     <h1 class="hero__name">Oumaima El Alaoui</h1>
-    <h2 class="hero__title">I build robust, scalable software.</h2>
+    <h2 class="hero__title">I build <span class="typed" id="typed"></span><span class="cursor" aria-hidden="true">|</span></h2>
     <p class="hero__desc">
       Software engineer based in Rabat, Morocco. I design and ship production
       microservices and REST APIs — going deep with .NET 8, while picking up
