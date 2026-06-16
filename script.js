@@ -1,20 +1,23 @@
 // ===== Theme toggle with persistence =====
 const toggle = document.getElementById("themeToggle");
 const saved = localStorage.getItem("theme");
-if (saved === "light") {
-  document.documentElement.setAttribute("data-theme", "light");
+// Default is the beige (light) theme; dark = warm espresso.
+if (saved === "dark") {
+  document.documentElement.setAttribute("data-theme", "dark");
   toggle.textContent = "☀️";
+} else {
+  toggle.textContent = "🌙";
 }
 toggle.addEventListener("click", () => {
-  const isLight = document.documentElement.getAttribute("data-theme") === "light";
-  if (isLight) {
+  const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+  if (isDark) {
     document.documentElement.removeAttribute("data-theme");
     toggle.textContent = "🌙";
-    localStorage.setItem("theme", "dark");
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    toggle.textContent = "☀️";
     localStorage.setItem("theme", "light");
+  } else {
+    document.documentElement.setAttribute("data-theme", "dark");
+    toggle.textContent = "☀️";
+    localStorage.setItem("theme", "dark");
   }
 });
 
