@@ -14,16 +14,16 @@
   --shadow: rgba(120, 90, 50, 0.2);
   --maxw: 1040px;
 }
-/* Dark: warm espresso */
+/* Dark: charcoal + warm cream */
 [data-theme="dark"] {
-  --bg: #211c16;
-  --bg-soft: #2a241d;
-  --text: #f1e9da;
-  --text-dim: #b6a890;
-  --accent: #d9a86c;
-  --accent-2: #c9895f;
-  --accent-3: #a8a07c;
-  --grad: linear-gradient(120deg, #d9a86c, #c9895f 55%, #a8a07c);
+  --bg: #1b1a17;            /* near-black charcoal */
+  --bg-soft: #24221d;
+  --text: #f1ece1;          /* warm cream */
+  --text-dim: #a9a190;
+  --accent: #d8a866;        /* caramel */
+  --accent-2: #c98f63;      /* clay */
+  --accent-3: #b8a988;      /* soft taupe */
+  --grad: linear-gradient(120deg, #d8a866, #c98f63 55%, #b8a988);
   --card: rgba(255, 255, 255, 0.05);
   --card-border: rgba(255, 255, 255, 0.1);
   --shadow: rgba(0, 0, 0, 0.5);
