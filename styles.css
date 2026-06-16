@@ -14,19 +14,19 @@
   --shadow: rgba(120, 90, 50, 0.2);
   --maxw: 1040px;
 }
-/* Dark: charcoal + warm cream */
+/* Dark: soft warm charcoal, low-contrast for eye comfort */
 [data-theme="dark"] {
-  --bg: #1b1a17;            /* near-black charcoal */
-  --bg-soft: #24221d;
-  --text: #f1ece1;          /* warm cream */
-  --text-dim: #a9a190;
-  --accent: #d8a866;        /* caramel */
-  --accent-2: #c98f63;      /* clay */
-  --accent-3: #b8a988;      /* soft taupe */
-  --grad: linear-gradient(120deg, #d8a866, #c98f63 55%, #b8a988);
-  --card: rgba(255, 255, 255, 0.05);
-  --card-border: rgba(255, 255, 255, 0.1);
-  --shadow: rgba(0, 0, 0, 0.5);
+  --bg: #26241f;            /* warm charcoal, not near-black */
+  --bg-soft: #2e2c26;
+  --text: #ddd5c6;          /* soft off-white, not bright cream */
+  --text-dim: #97907f;
+  --accent: #cda572;        /* gently muted caramel */
+  --accent-2: #c0916b;      /* clay */
+  --accent-3: #b0a386;      /* soft taupe */
+  --grad: linear-gradient(120deg, #cda572, #c0916b 55%, #b0a386);
+  --card: rgba(255, 255, 255, 0.04);
+  --card-border: rgba(255, 255, 255, 0.08);
+  --shadow: rgba(0, 0, 0, 0.4);
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -51,8 +51,8 @@ a { color: inherit; text-decoration: none; }
 .blob--1 { width: 480px; height: 480px; background: var(--accent);   top: -120px; left: -100px; animation: drift1 18s ease-in-out infinite; }
 .blob--2 { width: 420px; height: 420px; background: var(--accent-2); bottom: -140px; right: -80px; animation: drift2 22s ease-in-out infinite; }
 .blob--3 { width: 360px; height: 360px; background: var(--accent-3); top: 40%; left: 55%; animation: drift3 20s ease-in-out infinite; opacity: .25; }
-[data-theme="dark"] .blob { opacity: .5; }
-[data-theme="dark"] .blob--3 { opacity: .35; }
+[data-theme="dark"] .blob { opacity: .3; }
+[data-theme="dark"] .blob--3 { opacity: .22; }
 
 @keyframes drift1 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(80px,60px) scale(1.15); } }
 @keyframes drift2 { 0%,100% { transform: translate(0,0) scale(1); } 50% { transform: translate(-70px,-50px) scale(1.1); } }
