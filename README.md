@@ -1,4 +1,4 @@
-# Portfolio — O. El Alaoui
+# Portfolio — Oumaima El Alaoui
 
 A fast, responsive personal portfolio built with plain HTML, CSS, and vanilla JavaScript. No build step, no framework — loads instantly and deploys free to GitHub Pages.
 
@@ -23,6 +23,6 @@ python -m http.server 5500
 4. Your site goes live at `https://<username>.github.io/portfolio/`.
 
 ## Customize
-- **Name / bio / links:** edit the text in `index.html` (search for `EDIT` comments).
+- **Links:** edit the text in `index.html` (search for `EDIT` comments) — replace the `#` placeholders for GitHub and LinkedIn with your real URLs.
 - **Projects:** copy a `.card` block in the Projects section.
 - **Colors:** tweak the CSS variables at the top of `styles.css`.
