@@ -19,8 +19,10 @@ python -m http.server 5500
 ## Deploy to GitHub Pages
 1. Push this repo to GitHub (e.g. a repo named `portfolio` or `<username>.github.io`).
 2. Go to **Settings → Pages**.
-3. Set **Source** to `Deploy from a branch`, branch `main`, folder `/ (root)`.
-4. Your site goes live at `https://<username>.github.io/portfolio/`.
+3. Set **Source** to `Deploy from a branch`, branch `main`, folder **`/docs`**.
+4. Your site goes live at `https://<username>.github.io/<repo>/`.
+
+> Note: the site files live in the `docs/` folder, so the Pages source is set to `/docs`.
 
 ## Customize
 - **Links:** edit the text in `index.html` (search for `EDIT` comments) — replace the `#` placeholders for GitHub and LinkedIn with your real URLs.
