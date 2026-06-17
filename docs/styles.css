@@ -215,6 +215,7 @@ a { color: inherit; text-decoration: none; }
   background: var(--grad); -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity .3s;
 }
+.card[data-href] { cursor: pointer; }
 .card:hover { transform: translateY(-8px); box-shadow: 0 24px 50px -22px var(--accent); }
 .card:hover::before { opacity: 1; }
 .card__top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }

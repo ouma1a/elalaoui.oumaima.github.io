@@ -91,6 +91,14 @@ function startTyping(lang) {
   tick();
 }
 
+// ===== Make whole project cards clickable =====
+document.querySelectorAll(".card[data-href]").forEach((card) => {
+  card.addEventListener("click", (e) => {
+    if (e.target.closest("a")) return; // let explicit links handle themselves
+    window.open(card.dataset.href, "_blank", "noopener");
+  });
+});
+
 // ===== Language switch (EN / FR) with persistence =====
 const langButtons = document.querySelectorAll("#lang button");
 
