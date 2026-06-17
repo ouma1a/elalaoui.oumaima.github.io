@@ -22,37 +22,46 @@
   <header class="nav">
     <a href="#" class="nav__logo">OE</a>
     <nav class="nav__links">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <a href="#about" data-en="About" data-fr="À propos">About</a>
+      <a href="#experience" data-en="Experience" data-fr="Expérience">Experience</a>
+      <a href="#skills" data-en="Skills" data-fr="Compétences">Skills</a>
+      <a href="#projects" data-en="Projects" data-fr="Projets">Projects</a>
+      <a href="#contact" data-en="Contact" data-fr="Contact">Contact</a>
     </nav>
-    <button class="nav__theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    <div class="nav__controls">
+      <div class="lang" id="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
+      <button class="nav__theme" id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </div>
   </header>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
-    <p class="hero__eyebrow">Hi, my name is</p>
+    <p class="hero__eyebrow" data-en="Hi, my name is" data-fr="Bonjour, je m'appelle">Hi, my name is</p>
     <h1 class="hero__name">Oumaima El Alaoui</h1>
-    <h2 class="hero__title">I build <span class="typed" id="typed"></span><span class="cursor" aria-hidden="true">|</span></h2>
-    <p class="hero__desc">
+    <h2 class="hero__title"><span data-en="I build " data-fr="Je conçois ">I build </span><span class="typed" id="typed"></span><span class="cursor" aria-hidden="true">|</span></h2>
+    <p class="hero__desc"
+       data-en="Software engineer based in Rabat, Morocco. I design and ship production microservices and REST APIs — going deep with .NET 8, while picking up new languages and stacks fast. I care about solid engineering fundamentals that carry across any technology."
+       data-fr="Ingénieure logicielle basée à Rabat, au Maroc. Je conçois et déploie des microservices et des API REST en production — avec une expertise approfondie en .NET 8, tout en apprenant rapidement de nouveaux langages et technologies. J'accorde une grande importance aux fondamentaux solides du génie logiciel, valables quelle que soit la technologie.">
       Software engineer based in Rabat, Morocco. I design and ship production
       microservices and REST APIs — going deep with .NET 8, while picking up
       new languages and stacks fast. I care about solid engineering fundamentals
       that carry across any technology.
     </p>
     <div class="hero__cta">
-      <a href="#projects" class="btn btn--primary">View my work</a>
-      <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      <a href="#projects" class="btn btn--primary" data-en="View my work" data-fr="Voir mes projets">View my work</a>
+      <a href="#contact" class="btn btn--ghost" data-en="Get in touch" data-fr="Me contacter">Get in touch</a>
     </div>
   </section>
 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section">
-    <h2 class="section__title"><span>01.</span> About me</h2>
+    <h2 class="section__title"><span class="num">01.</span> <span data-en="About me" data-fr="À propos">About me</span></h2>
     <div class="about">
-      <p>
+      <p data-en="I'm a software engineer who believes the fundamentals — clean architecture, good API design, testing, and clear thinking — matter more than any single language. My deepest experience is in .NET and C#, where I've designed and delivered cloud-native microservices and REST APIs in production, but I move comfortably across stacks: Java/Spring Boot, Node.js, Python, and front-end work in Angular and React."
+         data-fr="Je suis une ingénieure logicielle convaincue que les fondamentaux — architecture propre, bonne conception d'API, tests et raisonnement clair — comptent plus que n'importe quel langage. Mon expérience la plus approfondie est en .NET et C#, où j'ai conçu et livré des microservices cloud-native et des API REST en production, mais j'évolue aisément à travers différentes technologies : Java/Spring Boot, Node.js, Python, ainsi que le front-end avec Angular et React.">
         I'm a software engineer who believes the fundamentals — clean
         architecture, good API design, testing, and clear thinking — matter more
         than any single language. My deepest experience is in .NET and C#, where
@@ -60,7 +69,8 @@
         production, but I move comfortably across stacks: Java/Spring Boot,
         Node.js, Python, and front-end work in Angular and React.
       </p>
-      <p>
+      <p data-en="I learn new technologies quickly and adapt to whatever a problem needs. I'm comfortable across the full development lifecycle in Agile teams, and I have a genuine passion for software engineering and emerging tech, including GenAI. I actively use AI tools to accelerate my work — prototyping, code review, and ramping up on new stacks faster — while keeping a critical eye on correctness, security, and design. Right now I'm building side projects to broaden my range in distributed systems and resilient API design."
+         data-fr="J'apprends rapidement les nouvelles technologies et je m'adapte aux besoins de chaque problème. Je suis à l'aise sur l'ensemble du cycle de développement en équipe Agile, et j'ai une véritable passion pour le génie logiciel et les technologies émergentes, dont la GenAI. J'utilise activement les outils d'IA pour accélérer mon travail — prototypage, revue de code et montée en compétence plus rapide sur de nouvelles technologies — tout en gardant un œil critique sur l'exactitude, la sécurité et la conception. En ce moment, je développe des projets personnels pour élargir mes compétences en systèmes distribués et en conception d'API résilientes.">
         I learn new technologies quickly and adapt to whatever a problem needs.
         I'm comfortable across the full development lifecycle in Agile teams, and
         I have a genuine passion for software engineering and emerging tech,
@@ -75,61 +85,68 @@
 
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience" class="section">
-    <h2 class="section__title"><span>02.</span> Experience</h2>
+    <h2 class="section__title"><span class="num">02.</span> <span data-en="Experience" data-fr="Expérience">Experience</span></h2>
     <div class="timeline">
 
       <article class="job">
         <div class="job__head">
-          <h3 class="job__role">Software Engineer <span>· B3GTech</span></h3>
-          <span class="job__date">Sep 2024 – Present</span>
+          <h3 class="job__role"><span data-en="Software Engineer" data-fr="Ingénieure Logicielle">Software Engineer</span> <span class="company">· B3GTech</span></h3>
+          <span class="job__date" data-en="Sep 2024 – Present" data-fr="Sep. 2024 – Présent">Sep 2024 – Present</span>
         </div>
         <ul class="job__points">
-          <li>Designed and delivered backend microservices and REST APIs in C# / .NET 8, owning services end-to-end from contract definition to containerized deployment on Docker.</li>
-          <li>Acted as API Designer and technical lead, defining contract-first APIs with OpenAPI 3.0.3 and standardized error handling across a distributed microservices ecosystem.</li>
-          <li>Led the redesign of a low-code platform architecture, improving scalability and maintainability of backend services.</li>
-          <li>Collaborated directly with client business experts to translate requirements into tailored technical solutions.</li>
-          <li>Managed CI/CD pipelines and source control workflows using Azure DevOps and Git, and mentored interns.</li>
+          <li data-en="Designed and delivered backend microservices and REST APIs in C# / .NET 8, owning services end-to-end from contract definition to containerized deployment on Docker."
+              data-fr="Conception et livraison de microservices backend et d'API REST en C# / .NET 8, en prenant en charge les services de bout en bout, de la définition du contrat au déploiement conteneurisé sur Docker.">Designed and delivered backend microservices and REST APIs in C# / .NET 8, owning services end-to-end from contract definition to containerized deployment on Docker.</li>
+          <li data-en="Acted as API Designer and technical lead, defining contract-first APIs with OpenAPI 3.0.3 and standardized error handling across a distributed microservices ecosystem."
+              data-fr="Rôle de conceptrice d'API et de référente technique : définition d'API contract-first avec OpenAPI 3.0.3 et gestion d'erreurs standardisée au sein d'un écosystème de microservices distribués.">Acted as API Designer and technical lead, defining contract-first APIs with OpenAPI 3.0.3 and standardized error handling across a distributed microservices ecosystem.</li>
+          <li data-en="Led the redesign of a low-code platform architecture, improving scalability and maintainability of backend services."
+              data-fr="Pilotage de la refonte de l'architecture d'une plateforme low-code, améliorant la scalabilité et la maintenabilité des services backend.">Led the redesign of a low-code platform architecture, improving scalability and maintainability of backend services.</li>
+          <li data-en="Collaborated directly with client business experts to translate requirements into tailored technical solutions."
+              data-fr="Collaboration directe avec les experts métier des clients pour traduire les besoins en solutions techniques sur mesure.">Collaborated directly with client business experts to translate requirements into tailored technical solutions.</li>
+          <li data-en="Managed CI/CD pipelines and source control workflows using Azure DevOps and Git, and mentored interns."
+              data-fr="Gestion des pipelines CI/CD et des workflows de gestion de code avec Azure DevOps et Git, et encadrement de stagiaires.">Managed CI/CD pipelines and source control workflows using Azure DevOps and Git, and mentored interns.</li>
         </ul>
       </article>
 
       <article class="job">
         <div class="job__head">
-          <h3 class="job__role">Software Engineering Intern <span>· B3GTech</span></h3>
-          <span class="job__date">Feb 2024 – Aug 2024</span>
+          <h3 class="job__role"><span data-en="Software Engineering Intern" data-fr="Stagiaire en Génie Logiciel">Software Engineering Intern</span> <span class="company">· B3GTech</span></h3>
+          <span class="job__date" data-en="Feb 2024 – Aug 2024" data-fr="Fév. 2024 – Août 2024">Feb 2024 – Aug 2024</span>
         </div>
         <ul class="job__points">
-          <li>Developed a money-transfer module integrated into the core banking platform using .NET and clean architecture principles.</li>
-          <li>Contributed to a mobile banking feature, applying TDD and unit testing best practices.</li>
+          <li data-en="Developed a money-transfer module integrated into the core banking platform using .NET and clean architecture principles."
+              data-fr="Développement d'un module de transfert d'argent intégré à la plateforme bancaire centrale, en .NET et selon les principes de la clean architecture.">Developed a money-transfer module integrated into the core banking platform using .NET and clean architecture principles.</li>
+          <li data-en="Contributed to a mobile banking feature, applying TDD and unit testing best practices."
+              data-fr="Contribution à une fonctionnalité de banque mobile, en appliquant le TDD et les bonnes pratiques de tests unitaires.">Contributed to a mobile banking feature, applying TDD and unit testing best practices.</li>
         </ul>
       </article>
 
     </div>
 
-    <h3 class="subsection__title">Education</h3>
+    <h3 class="subsection__title" data-en="Education" data-fr="Formation">Education</h3>
     <div class="timeline">
       <article class="job">
         <div class="job__head">
-          <h3 class="job__role">Engineering Degree in Computer Engineering</h3>
-          <span class="job__date">Sep 2021 – Jun 2024</span>
+          <h3 class="job__role"><span data-en="Engineering Degree in Computer Engineering" data-fr="Diplôme d'Ingénieur en Génie Informatique">Engineering Degree in Computer Engineering</span></h3>
+          <span class="job__date" data-en="Sep 2021 – Jun 2024" data-fr="Sep. 2021 – Juin 2024">Sep 2021 – Jun 2024</span>
         </div>
-        <p class="job__sub">Moulay Ismail University – FST Errachidia</p>
+        <p class="job__sub" data-en="Moulay Ismail University – FST Errachidia" data-fr="Université Moulay Ismail – FST Errachidia">Moulay Ismail University – FST Errachidia</p>
       </article>
       <article class="job">
         <div class="job__head">
-          <h3 class="job__role">DEUST — Science &amp; Technology (Math · CS · Physics)</h3>
-          <span class="job__date">Sep 2019 – Jul 2021</span>
+          <h3 class="job__role"><span data-en="DEUST — Science & Technology (Math · CS · Physics)" data-fr="DEUST — Sciences et Technologies (Maths · Info · Physique)">DEUST — Science &amp; Technology (Math · CS · Physics)</span></h3>
+          <span class="job__date" data-en="Sep 2019 – Jul 2021" data-fr="Sep. 2019 – Juil. 2021">Sep 2019 – Jul 2021</span>
         </div>
-        <p class="job__sub">Moulay Ismail University – FST Errachidia</p>
+        <p class="job__sub" data-en="Moulay Ismail University – FST Errachidia" data-fr="Université Moulay Ismail – FST Errachidia">Moulay Ismail University – FST Errachidia</p>
       </article>
     </div>
   </section>
 
   <!-- ===== SKILLS ===== -->
   <section id="skills" class="section">
-    <h2 class="section__title"><span>03.</span> Skills</h2>
+    <h2 class="section__title"><span class="num">03.</span> <span data-en="Skills" data-fr="Compétences">Skills</span></h2>
     <div class="skills">
       <div class="skills__group">
-        <h3>Core</h3>
+        <h3 data-en="Core" data-fr="Principal">Core</h3>
         <ul><li>C#</li><li>.NET 8</li><li>ASP.NET Core (MVC / Web API)</li><li>REST APIs</li><li>OpenAPI / Swagger</li></ul>
       </div>
       <div class="skills__group">
@@ -138,47 +155,53 @@
       </div>
       <div class="skills__group">
         <h3>Architecture</h3>
-        <ul><li>Microservices</li><li>Distributed Systems</li><li>Clean Architecture</li><li>Contract-First Design</li><li>API Gateway</li></ul>
+        <ul><li>Microservices</li><li data-en="Distributed Systems" data-fr="Systèmes distribués">Distributed Systems</li><li>Clean Architecture</li><li data-en="Contract-First Design" data-fr="Conception contract-first">Contract-First Design</li><li>API Gateway</li></ul>
       </div>
       <div class="skills__group">
-        <h3>Databases</h3>
+        <h3 data-en="Databases" data-fr="Bases de données">Databases</h3>
         <ul><li>SQL Server</li><li>PostgreSQL</li><li>MongoDB</li><li>MySQL</li></ul>
       </div>
       <div class="skills__group">
-        <h3>Testing &amp; Messaging</h3>
-        <ul><li>Unit Testing</li><li>Integration Testing</li><li>RabbitMQ</li><li>Redis</li><li>Postman</li></ul>
+        <h3 data-en="Testing & Messaging" data-fr="Tests & Messagerie">Testing &amp; Messaging</h3>
+        <ul><li data-en="Unit Testing" data-fr="Tests unitaires">Unit Testing</li><li data-en="Integration Testing" data-fr="Tests d'intégration">Integration Testing</li><li>RabbitMQ</li><li>Redis</li><li>Postman</li></ul>
       </div>
       <div class="skills__group">
-        <h3>Beyond .NET</h3>
+        <h3 data-en="Beyond .NET" data-fr="Au-delà de .NET">Beyond .NET</h3>
         <ul><li>Java / Spring Boot</li><li>Node.js</li><li>Python</li><li>Angular / React</li><li>Blazor</li></ul>
       </div>
       <div class="skills__group">
-        <h3>AI-Augmented Dev</h3>
-        <ul><li>AI pair programming</li><li>LLM-assisted code review</li><li>Prompt engineering</li><li>Rapid prototyping</li></ul>
+        <h3 data-en="AI-Augmented Dev" data-fr="Dév. augmenté par l'IA">AI-Augmented Dev</h3>
+        <ul>
+          <li data-en="AI pair programming" data-fr="Programmation en binôme avec l'IA">AI pair programming</li>
+          <li data-en="LLM-assisted code review" data-fr="Revue de code assistée par LLM">LLM-assisted code review</li>
+          <li data-en="Prompt engineering" data-fr="Ingénierie de prompts">Prompt engineering</li>
+          <li data-en="Rapid prototyping" data-fr="Prototypage rapide">Rapid prototyping</li>
+        </ul>
       </div>
     </div>
   </section>
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="section">
-    <h2 class="section__title"><span>04.</span> Projects</h2>
+    <h2 class="section__title"><span class="num">04.</span> <span data-en="Projects" data-fr="Projets">Projects</span></h2>
     <div class="projects">
 
-      <!-- PROJECT CARD — copy this block to add more -->
       <article class="card">
         <div class="card__top">
           <span class="card__icon">📦</span>
           <div class="card__links">
-            <a href="#" aria-label="GitHub repo" title="Code">&lt;/&gt;</a>
-            <a href="#" aria-label="Live demo" title="Live">↗</a>
+            <a href="https://github.com/ouma1a/webhook-delivery-service" target="_blank" rel="noopener" aria-label="GitHub repo" title="Code">&lt;/&gt;</a>
           </div>
         </div>
         <h3 class="card__title">Webhook Delivery Service</h3>
-        <p class="card__desc">
-          A resilient service that accepts events and delivers them to
-          subscribers with retries, exponential backoff, and a dead-letter queue.
+        <p class="card__desc"
+           data-en="A resilient .NET 8 service that accepts events and delivers them to subscribers with retries, exponential backoff, a dead-letter queue, and HMAC-signed payloads."
+           data-fr="Un service .NET 8 résilient qui reçoit des événements et les distribue aux abonnés avec relances, backoff exponentiel, file de dead-letter et charges utiles signées en HMAC.">
+          A resilient .NET 8 service that accepts events and delivers them to
+          subscribers with retries, exponential backoff, a dead-letter queue,
+          and HMAC-signed payloads.
         </p>
-        <ul class="card__tags"><li>ASP.NET Core</li><li>Polly</li><li>RabbitMQ</li></ul>
+        <ul class="card__tags"><li>ASP.NET Core</li><li>Channels</li><li>xUnit</li></ul>
       </article>
 
       <article class="card">
@@ -186,11 +209,12 @@
           <span class="card__icon">🔗</span>
           <div class="card__links">
             <a href="#" aria-label="GitHub repo" title="Code">&lt;/&gt;</a>
-            <a href="#" aria-label="Live demo" title="Live">↗</a>
           </div>
         </div>
         <h3 class="card__title">URL Shortener + Analytics</h3>
-        <p class="card__desc">
+        <p class="card__desc"
+           data-en="A fast link shortener with click analytics, Redis caching, and built-in rate limiting."
+           data-fr="Un raccourcisseur de liens rapide avec statistiques de clics, cache Redis et limitation de débit intégrée.">
           A fast link shortener with click analytics, Redis caching, and
           built-in rate limiting.
         </p>
@@ -202,11 +226,12 @@
           <span class="card__icon">⚡</span>
           <div class="card__links">
             <a href="#" aria-label="GitHub repo" title="Code">&lt;/&gt;</a>
-            <a href="#" aria-label="Live demo" title="Live">↗</a>
           </div>
         </div>
         <h3 class="card__title">In-Memory Cache Library</h3>
-        <p class="card__desc">
+        <p class="card__desc"
+           data-en="A thread-safe cache with TTL expiry and LRU eviction, benchmarked with BenchmarkDotNet and fully unit-tested."
+           data-fr="Un cache thread-safe avec expiration TTL et éviction LRU, mesuré avec BenchmarkDotNet et entièrement testé unitairement.">
           A thread-safe cache with TTL expiry and LRU eviction, benchmarked
           with BenchmarkDotNet and fully unit-tested.
         </p>
@@ -214,26 +239,30 @@
       </article>
 
     </div>
-    <p class="projects__note">More coming soon — these are the side projects I'm currently building.</p>
+    <p class="projects__note"
+       data-en="More coming soon — these are the side projects I'm currently building."
+       data-fr="D'autres à venir — voici les projets personnels que je développe actuellement.">More coming soon — these are the side projects I'm currently building.</p>
   </section>
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section section--contact">
-    <h2 class="section__title section__title--center"><span>05.</span> Get in touch</h2>
-    <p class="contact__text">
+    <h2 class="section__title section__title--center"><span class="num">05.</span> <span data-en="Get in touch" data-fr="Me contacter">Get in touch</span></h2>
+    <p class="contact__text"
+       data-en="I'm open to new opportunities and collaboration. Feel free to reach out."
+       data-fr="Je suis ouverte à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter.">
       I'm open to new opportunities and collaboration. Feel free to reach out.
     </p>
-    <a href="mailto:elalaouioumaim546@gmail.com" class="btn btn--primary">Say hello</a>
+    <a href="mailto:elalaouioumaim546@gmail.com" class="btn btn--primary" data-en="Say hello" data-fr="Dire bonjour">Say hello</a>
     <div class="contact__socials">
       <a href="https://github.com/ouma1a" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.linkedin.com/in/oumaima-el-alaoui-4b50612a0/" target="_blank" rel="noopener">LinkedIn</a>
       <a href="mailto:elalaouioumaim546@gmail.com">Email</a>
-      <span class="contact__meta">Rabat, Morocco</span>
+      <span class="contact__meta" data-en="Rabat, Morocco" data-fr="Rabat, Maroc">Rabat, Morocco</span>
     </div>
   </section>
 
   <footer class="footer">
-    <p>Designed &amp; built by Oumaima El Alaoui · 2026</p>
+    <p data-en="Designed & built by Oumaima El Alaoui · 2026" data-fr="Conçu et développé par Oumaima El Alaoui · 2026">Designed &amp; built by Oumaima El Alaoui · 2026</p>
   </footer>
 
   <script src="script.js"></script>
