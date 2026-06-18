@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ===== SCROLL PROGRESS BAR ===== -->
+  <div class="progress" id="progress" aria-hidden="true"></div>
+
   <!-- ===== ANIMATED BACKGROUND ===== -->
   <div class="blobs" aria-hidden="true">
     <span class="blob blob--1"></span>
@@ -52,7 +55,26 @@
     </p>
     <div class="hero__cta">
       <a href="#projects" class="btn btn--primary" data-en="View my work" data-fr="Voir mes projets">View my work</a>
+      <a href="Oumaima-El-Alaoui-CV.pdf" download class="btn btn--ghost" data-en="Download CV" data-fr="Télécharger le CV">Download CV</a>
       <a href="#contact" class="btn btn--ghost" data-en="Get in touch" data-fr="Me contacter">Get in touch</a>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="stats-band">
+    <div class="stats">
+      <div class="stat">
+        <span class="stat__num" data-target="2">0</span>
+        <span class="stat__label" data-en="Years of Experience" data-fr="Années d'expérience">Years of Experience</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-target="15" data-suffix="+">0</span>
+        <span class="stat__label" data-en="Technologies" data-fr="Technologies">Technologies</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-target="3">0</span>
+        <span class="stat__label" data-en="Spoken Languages" data-fr="Langues parlées">Spoken Languages</span>
+      </div>
     </div>
   </section>
 
@@ -83,9 +105,39 @@
     </div>
   </section>
 
+  <!-- ===== BEYOND THE CODE (PERSONALITY) ===== -->
+  <section id="about-me" class="section">
+    <h2 class="section__title"><span class="num">02.</span> <span data-en="Beyond the Code" data-fr="Au-delà du code">Beyond the Code</span></h2>
+    <div class="profile">
+      <div class="profile__photo">
+        <span class="profile__initials">OE</span>
+        <!-- Drop a file named photo.jpg in this folder to show your picture. -->
+        <img src="photo.jpg" alt="Oumaima El Alaoui" class="profile__img" onload="this.classList.add('loaded')" />
+      </div>
+      <div class="profile__body">
+        <p data-en="Beyond writing software, I'm a curious and driven engineer who loves turning complex problems into simple, elegant solutions. I thrive in collaborative teams — I genuinely enjoy mentoring, sharing knowledge, and learning from others. I'm detail-oriented, adaptable, and sincerely enthusiastic about new technology. When I commit to something, I see it through."
+           data-fr="Au-delà du code, je suis une ingénieure curieuse et motivée qui aime transformer des problèmes complexes en solutions simples et élégantes. Je m'épanouis dans le travail d'équipe — j'aime sincèrement encadrer, partager mes connaissances et apprendre des autres. Je suis minutieuse, adaptable et réellement enthousiaste face aux nouvelles technologies. Quand je m'engage, je vais au bout des choses.">
+          Beyond writing software, I'm a curious and driven engineer who loves
+          turning complex problems into simple, elegant solutions. I thrive in
+          collaborative teams — I genuinely enjoy mentoring, sharing knowledge,
+          and learning from others. I'm detail-oriented, adaptable, and sincerely
+          enthusiastic about new technology. When I commit to something, I see it through.
+        </p>
+        <ul class="traits">
+          <li data-en="Curious" data-fr="Curieuse">Curious</li>
+          <li data-en="Adaptable" data-fr="Adaptable">Adaptable</li>
+          <li data-en="Team player" data-fr="Esprit d'équipe">Team player</li>
+          <li data-en="Detail-oriented" data-fr="Minutieuse">Detail-oriented</li>
+          <li data-en="Lifelong learner" data-fr="Apprentissage continu">Lifelong learner</li>
+          <li data-en="Problem solver" data-fr="Résolutrice de problèmes">Problem solver</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== EXPERIENCE ===== -->
   <section id="experience" class="section">
-    <h2 class="section__title"><span class="num">02.</span> <span data-en="Experience" data-fr="Expérience">Experience</span></h2>
+    <h2 class="section__title"><span class="num">03.</span> <span data-en="Experience" data-fr="Expérience">Experience</span></h2>
     <div class="timeline">
 
       <article class="job">
@@ -143,7 +195,7 @@
 
   <!-- ===== SKILLS ===== -->
   <section id="skills" class="section">
-    <h2 class="section__title"><span class="num">03.</span> <span data-en="Skills" data-fr="Compétences">Skills</span></h2>
+    <h2 class="section__title"><span class="num">04.</span> <span data-en="Skills" data-fr="Compétences">Skills</span></h2>
     <div class="skills">
       <div class="skills__group">
         <h3 data-en="Core" data-fr="Principal">Core</h3>
@@ -183,7 +235,7 @@
 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="section">
-    <h2 class="section__title"><span class="num">04.</span> <span data-en="Projects" data-fr="Projets">Projects</span></h2>
+    <h2 class="section__title"><span class="num">05.</span> <span data-en="Projects" data-fr="Projets">Projects</span></h2>
     <div class="projects">
 
       <article class="card" data-href="https://github.com/ouma1a/webhook-delivery-service">
@@ -246,7 +298,7 @@
 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section section--contact">
-    <h2 class="section__title section__title--center"><span class="num">05.</span> <span data-en="Get in touch" data-fr="Me contacter">Get in touch</span></h2>
+    <h2 class="section__title section__title--center"><span class="num">06.</span> <span data-en="Get in touch" data-fr="Me contacter">Get in touch</span></h2>
     <p class="contact__text"
        data-en="I'm open to new opportunities and collaboration. Feel free to reach out."
        data-fr="Je suis ouverte à de nouvelles opportunités et collaborations. N'hésitez pas à me contacter.">
@@ -264,6 +316,8 @@
   <footer class="footer">
     <p data-en="Designed & built by Oumaima El Alaoui · 2026" data-fr="Conçu et développé par Oumaima El Alaoui · 2026">Designed &amp; built by Oumaima El Alaoui · 2026</p>
   </footer>
+
+  <button class="to-top" id="toTop" aria-label="Back to top" title="Back to top">↑</button>
 
   <script src="script.js"></script>
 </body>

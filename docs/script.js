@@ -91,6 +91,55 @@ function startTyping(lang) {
   tick();
 }
 
+// ===== Animated counters (count up when scrolled into view) =====
+function animateCounter(el) {
+  const target = parseFloat(el.dataset.target) || 0;
+  const suffix = el.dataset.suffix || "";
+  if (reduceMotion) {
+    el.textContent = target + suffix;
+    return;
+  }
+  const duration = 1400;
+  const start = performance.now();
+  function frame(now) {
+    const p = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - p, 3); // easeOutCubic
+    el.textContent = Math.round(eased * target) + suffix;
+    if (p < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+}
+const statObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        animateCounter(e.target);
+        statObserver.unobserve(e.target);
+      }
+    });
+  },
+  { threshold: 0.5 }
+);
+document.querySelectorAll(".stat__num").forEach((el) => statObserver.observe(el));
+
+// ===== Scroll progress bar + back-to-top button =====
+const progressBar = document.getElementById("progress");
+const toTop = document.getElementById("toTop");
+function onScroll() {
+  const doc = document.documentElement;
+  const max = doc.scrollHeight - doc.clientHeight;
+  const ratio = max > 0 ? doc.scrollTop / max : 0;
+  if (progressBar) progressBar.style.width = ratio * 100 + "%";
+  if (toTop) toTop.classList.toggle("show", doc.scrollTop > 400);
+}
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
+if (toTop) {
+  toTop.addEventListener("click", () =>
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  );
+}
+
 // ===== Make whole project cards clickable =====
 document.querySelectorAll(".card[data-href]").forEach((card) => {
   card.addEventListener("click", (e) => {
